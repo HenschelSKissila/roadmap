@@ -13,11 +13,13 @@ button:active{transform:scale(.975)}
  nav.tabs{flex:1;min-width:0;width:auto;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:2px}
  nav.tabs button{min-width:0;padding:7px 2px 6px;white-space:normal;overflow-wrap:anywhere;line-height:1.15;font-size:clamp(8px,2.55vw,11px);text-align:center;border:1px solid transparent;border-radius:9px}
  nav.tabs button.on{border-color:#755112;background:rgba(255,176,32,.11)}
- .langbar{margin:0 0 0 3px;gap:2px;align-self:center}
- .langbar button{padding:6px 4px;font-size:9px}
- .wrap{padding-bottom:calc(90px + env(safe-area-inset-bottom))}
+ .tabsrow>.langbar{display:none}
+ .langbar-mobile{display:flex;flex:0 0 auto;margin:0;gap:2px;align-self:center}
+ .langbar-mobile button{padding:5px 4px;font-size:9px}
+ .wrap{padding-bottom:calc(96px + env(safe-area-inset-bottom))}
  #appView .wrap{padding-top:14px}
  .install-card{bottom:calc(84px + env(safe-area-inset-bottom))!important}
 }
-@media(max-width:420px){.brand small{font-size:8px}.sync{padding:4px 6px;font-size:9px}.icon-btn{width:31px;height:31px}.tabsrow{padding-left:5px;padding-right:5px}.langbar button{padding:5px 3px}}
+@media(max-width:420px){.brand small{font-size:8px}.sync{padding:4px 6px;font-size:9px}.icon-btn{width:31px;height:31px}.tabsrow{padding-left:5px;padding-right:5px}.langbar-mobile button{padding:5px 3px}}
+@media(min-width:1200px){.langbar-mobile{display:none}}
 .install-card{position:fixed;z-index:40;right:16px;bottom:18px;max-width:min(390px,calc(100vw - 24px));display:flex;align-items:center;gap:10px;padding:12px;background:#151b23;border:1px solid #68501f;border-radius:14px;box-shadow:0 18px 60px #0009}.install-card[hidden]{display:none}.install-card>div{flex:1;min-width:0}.install-card strong,.install-card small{display:block}.install-card small,.install-card p{font-size:11px;color:var(--txt-2)}.install-card p{position:absolute;top:100%;margin:4px 0;background:#151b23;padding:8px;border:1px solid var(--line-2);border-radius:8px}.install-card .icon-btn{width:30px;height:30px}

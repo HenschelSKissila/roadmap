@@ -1377,7 +1377,7 @@ function paintStatic() {
   $$('[data-i18n-ph]').forEach(el => el.placeholder = t(el.dataset.i18nPh));
   $$('[data-i18n-title]').forEach(el => el.title = t(el.dataset.i18nTitle));
   document.title = t('app.name') + ' — ' + t('app.sub');
-  ['#langbar', '#langbarAuth'].forEach(sel => {
+  ['#langbar', '#langbarMobile', '#langbarAuth'].forEach(sel => {
     const bar = $(sel); if (!bar) return;
     bar.innerHTML = Object.keys(I18N.meta).map(k =>
       `<button data-lang="${k}" class="${k === lang ? 'on' : ''}" title="${esc(I18N.meta[k].name)}"
