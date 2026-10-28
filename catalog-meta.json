@@ -1,0 +1,44 @@
+{
+  "categories": [
+    "SCADA & HMI",
+    "PLC Siemens / automatisme général",
+    "Allen Bradley",
+    "Programmation C",
+    "Commande & instrumentation",
+    "IA & deep learning",
+    "EPLAN & CAO électrique",
+    "Moteurs & électronique de puissance",
+    "IoT, Edge & réseaux",
+    "MATLAB & signaux",
+    "Langues & rédaction",
+    "Beckhoff & CODESYS",
+    "Commande & systèmes"
+  ],
+  "duplicate_listings": [
+    {
+      "list_index": 3,
+      "title": "process-visualization-hmi-scada",
+      "duplicate_of": 1,
+      "note": "titre exactement répété dans la liste"
+    },
+    {
+      "list_index": 50,
+      "title": "Eplan Electric P8 Full course from Beginner to Advance 2021-6",
+      "duplicate_of": 50,
+      "note": "mention explicite x2 : une fiche unique, occurrences signalées"
+    },
+    {
+      "list_index": 78,
+      "title": "Learn Siemens S7-300 PLC Simatic Manager Step 7 WinCC HMI",
+      "duplicate_of": 76,
+      "note": "titre exactement répété dans la liste"
+    },
+    {
+      "list_index": 117,
+      "title": "Siemens PLC Programming Using SCL with MODBUS - Part 03 2023-12",
+      "duplicate_of": 117,
+      "note": "mention explicite x2 : une fiche unique, occurrences signalées"
+    }
+  ],
+  "catalog_count": 138
+}

@@ -1,1 +1,31 @@
-const CACHE='henschel-roadmap-v4';const SHELL=['./','./index.html','./styles.css','./app.js','./app-v2.js','./i18n.js','./i18n-v2.js','./data.js','./data-v2.js','./catalog-additions.js','./install.js','./config.js','./manifest.json','./icons/logo.svg','./icons/icon-192.png','./icons/icon-512.png','./icons/icon-maskable-512.png','./icons/apple-touch-icon.png','./icons/favicon.png'];self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(async c=>{for(const x of SHELL){try{await c.add(x)}catch(err){console.warn('cache shell',x,err)}}await self.skipWaiting()})));self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(a=>Promise.all(a.filter(x=>x!==CACHE).map(x=>caches.delete(x)))).then(()=>self.clients.claim())));self.addEventListener('fetch',e=>{const r=e.request;if(r.method!=='GET')return;const u=new URL(r.url);if(/\.supabase\.(co|in)$/.test(u.hostname))return;if(u.origin!==location.origin){e.respondWith(caches.match(r).then(x=>x||fetch(r).then(y=>{if(y.ok)caches.open(CACHE).then(c=>c.put(r,y.clone()));return y}).catch(()=>new Response('',{status:504}))));return}e.respondWith(fetch(r).then(y=>{if(y.ok)caches.open(CACHE).then(c=>c.put(r,y.clone()));return y}).catch(()=>caches.match(r).then(x=>x||caches.match('./index.html'))))});
+const CACHE_NAME = 'henschel-roadmap-v6';
+const PRECACHE = [
+  './', './index.html', './styles.css', './manifest.json', './config.js',
+  './app.js', './app-v2.js', './i18n.js', './i18n-v2.js', './data.js',
+  './data-v2.js', './catalog-additions.js', './install.js',
+  './icons/logo.svg', './icons/favicon.png', './icons/icon-192.png',
+  './icons/icon-512.png', './icons/icon-maskable-512.png', './icons/apple-touch-icon.png'
+];
+self.addEventListener('install', event => {
+  event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(PRECACHE)).then(() => self.skipWaiting()));
+});
+self.addEventListener('activate', event => {
+  event.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(key => key !== CACHE_NAME).map(key => caches.delete(key)))).then(() => self.clients.claim()));
+});
+self.addEventListener('fetch', event => {
+  const request = event.request;
+  if (request.method !== 'GET') return;
+  const url = new URL(request.url);
+  if (/\.supabase\.(co|in)$/.test(url.hostname)) return;
+  if (url.origin !== location.origin) {
+    event.respondWith(caches.match(request).then(cached => cached || fetch(request).then(response => {
+      if (response.ok) caches.open(CACHE_NAME).then(cache => cache.put(request, response.clone()));
+      return response;
+    }).catch(() => new Response('', { status: 504 }))));
+    return;
+  }
+  event.respondWith(fetch(request).then(response => {
+    if (response.ok) caches.open(CACHE_NAME).then(cache => cache.put(request, response.clone()));
+    return response;
+  }).catch(() => caches.match(request).then(cached => cached || caches.match('./index.html'))));
+});
