@@ -1355,16 +1355,55 @@ function reseedMissing() {
 }
 
 /* ── 15. sheet générique ─────────────────────────────────────────────────── */
+let sheetViewportHandler = null;
 function openSheet(html, after) {
   const m = $('#modal');
   m.innerHTML = `<div class="ovl"><div class="sheet"><div class="grab"></div>${html}</div></div>`;
   const ovl = $('.ovl', m), sheet = $('.sheet', m);
+  // Découpe le contenu en zones de tête/corps/pied sans toucher aux identifiants
+  // ni aux éléments utilisés par les gestionnaires existants.
+  const children = [...sheet.children];
+  const title = children.find(el => el.classList.contains('sheet-h')) || null;
+  const footer = [...children].reverse().find(el =>
+    el.matches('.row') && el.querySelector('.btn.pri'))
+    || ([...children].at(-1)?.matches('.row') && [...children].at(-1).querySelector('.btn') ? [...children].at(-1) : null)
+    || ([...children].at(-1)?.matches('.btn') ? [...children].at(-1) : null);
+  const head = document.createElement('div'); head.className = 'sheet-head';
+  const grab = children.find(el => el.classList.contains('grab'));
+  if (grab) head.append(grab);
+  if (title) head.append(title);
+  const body = document.createElement('div'); body.className = 'sheet-body';
+  children.forEach(el => { if (el !== grab && el !== title && el !== footer) body.append(el); });
+  sheet.replaceChildren(head, body);
+  if (footer) { const foot = document.createElement('div'); foot.className = 'sheet-foot'; foot.append(footer); sheet.append(foot); }
   ovl.onclick = e => { if (e.target === ovl) closeSheet(); };
   const x = $('[data-x]', sheet); if (x) x.onclick = closeSheet;
-  document.body.style.overflow = 'hidden';
+  document.body.style.overflow = 'hidden'; document.body.classList.add('sheet-open');
+  if (window.matchMedia('(max-width: 1023px)').matches) {
+    const vv = window.visualViewport;
+    const updateViewport = () => {
+      m.style.setProperty('--sheet-vvh', `${vv ? vv.height : window.innerHeight}px`);
+      m.style.setProperty('--sheet-top', `${vv ? vv.offsetTop : 0}px`);
+    };
+    sheetViewportHandler = updateViewport;
+    updateViewport();
+    if (vv) vv.addEventListener('resize', updateViewport);
+    window.addEventListener('resize', updateViewport);
+    body.addEventListener('focusin', e => {
+      if (e.target.matches('input,textarea,select')) setTimeout(() => e.target.scrollIntoView({ block: 'nearest', behavior: 'smooth' }), 80);
+    });
+  }
   after && after(sheet);
 }
-function closeSheet() { $('#modal').innerHTML = ''; document.body.style.overflow = ''; }
+function closeSheet() {
+  if (sheetViewportHandler) {
+    if (window.visualViewport) window.visualViewport.removeEventListener('resize', sheetViewportHandler);
+    window.removeEventListener('resize', sheetViewportHandler);
+    sheetViewportHandler = null;
+  }
+  $('#modal').innerHTML = ''; $('#modal').style.removeProperty('--sheet-vvh'); $('#modal').style.removeProperty('--sheet-top');
+  document.body.style.overflow = ''; document.body.classList.remove('sheet-open');
+}
 
 /* ── 16. rendu global, onglets, langue ───────────────────────────────────── */
 function saveUI() { lsSet(UI_KEY, ui); }

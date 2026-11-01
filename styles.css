@@ -399,3 +399,27 @@ button:active{transform:scale(.975)}
   #appView .wrap{max-width:none!important;margin:0!important;padding:26px 34px 80px!important}
   #appView.hide ~ #bottomnav{display:none!important}
 }
+
+
+/* Dialogue responsive : zones fixes et défilement dédié sur petits écrans. */
+.sheet-head,.sheet-body,.sheet-foot{display:contents}
+@media (max-width:1023px){
+  #modal{--sheet-vvh:100dvh;--sheet-top:0px}
+  #modal .ovl{inset:auto 0 auto;top:var(--sheet-top,0px);height:var(--sheet-vvh,100dvh);max-height:var(--sheet-vvh,100dvh);align-items:flex-end;z-index:2001;overflow:hidden}
+  #modal .sheet{box-sizing:border-box;display:flex;flex-direction:column;width:100%;max-width:none;max-height:calc(var(--sheet-vvh,100dvh) - env(safe-area-inset-top));min-height:0;overflow:hidden;padding:0;border-radius:20px 20px 0 0;overscroll-behavior:contain}
+  #modal .sheet-head{display:flex;flex-direction:column;flex:0 0 auto;position:relative;z-index:2;background:var(--bg-2);padding:12px 16px 10px;border-bottom:1px solid var(--line);}
+  #modal .sheet-head .grab{margin:0 auto 10px}
+  #modal .sheet-head:has(.grab):not(:has(.sheet-h)){padding-bottom:10px}
+  #modal .sheet-head .sheet-h{margin:0}
+  #modal .sheet-body{display:block;flex:1 1 auto;min-height:0;overflow:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;padding:14px 16px calc(18px + env(safe-area-inset-bottom));scroll-padding-bottom:20px}
+  #modal .sheet-body button{min-height:44px}
+  #modal .sheet-foot{display:block;flex:0 0 auto;position:relative;z-index:2;background:var(--bg-2);border-top:1px solid var(--line-2);padding:10px 16px calc(10px + env(safe-area-inset-bottom));}
+  #modal .sheet-foot>.row{margin:0!important;display:flex;gap:8px}
+  #modal .sheet-foot>.row>*{min-height:44px}
+  #modal .sheet-foot>button{min-height:44px;width:100%}
+  #modal .sheet-foot>.row>.btn{flex:1 1 auto}
+  #modal .sheet-head .icon-btn{width:44px;height:44px;flex:none}
+  #modal .sheet-head .sheet-h>.icon-btn{min-width:44px;min-height:44px}
+  body.sheet-open #bottomnav{display:none!important}
+}
+@supports not (height:100dvh){@media(max-width:1023px){#modal{--sheet-vvh:100vh}}}

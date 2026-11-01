@@ -66,6 +66,12 @@ Le service worker précache les fichiers énumérés dans `sw.js`. Lors d’une 
 
 **Si la barre reste en haut sur mobile : fermer l’app installée, vider son cache / les données du site, puis la réinstaller depuis l’URL publiée.** Cette version déplace explicitement `#bottomnav` hors du header et applique les règles mobiles dans la feuille CSS externe.
 
+### Le bouton « Enregistrer » est invisible sur téléphone
+
+Les dialogues de cours, de projet, de jalon, de module et de bloc peuvent contenir plus de champs que la hauteur de l’écran. Sur mobile (moins de 1024 px), leur en-tête et leur pied d’action restent désormais accessibles; seul le corps du dialogue défile. Le clavier virtuel ajuste la hauteur utile, la barre de navigation du bas est masquée pendant l’édition et le pied respecte la zone de sécurité de l’appareil. Faites défiler le contenu au milieu de la fenêtre si un champ est plus bas; les boutons Enregistrer/Annuler restent dans le pied.
+
+Après publication, rechargez l’application pour activer le cache `henschel-roadmap-v7`. Si l’ancienne interface persiste, fermez puis rouvrez la PWA ou rechargez la page en ligne.
+
 ## Tests locaux
 
 Servir le dossier à la racine du site; éviter l’ouverture directe avec `file://` (les service workers y sont désactivés) :
