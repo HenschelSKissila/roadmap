@@ -42,19 +42,19 @@ const id = MA();
 ok('aucun engagement en double', sql('select count(*) from projects') === '3', sql('select count(*) from projects'));
 ok('institut devenu IALB', sql("select institute from projects where code='masterarbeit'") === 'IALB',
    sql("select institute from projects where code='masterarbeit'"));
-ok('encadrant renseigné', sql("select supervisor from projects where code='masterarbeit'") === 'Prof. Dr.-Ing. Amir Ebrahimi',
+ok('encadrant renseigné', sql("select supervisor from projects where code='masterarbeit'") === 'Betreuer IALB',
    sql("select supervisor from projects where code='masterarbeit'"));
 ok('titre remplacé', /Reglerentwicklung/.test(sql("select title from projects where code='masterarbeit'")),
    sql("select title from projects where code='masterarbeit'").slice(0, 60));
 ok('sujet renseigné', +sql("select length(topic) from projects where code='masterarbeit'") > 50,
    sql("select length(topic) from projects where code='masterarbeit'") + ' caractères');
-ok('contact dans les notes', sql("select position('ebrahimi@ialb' in notes) from projects where code='masterarbeit'") !== '0');
+ok('aucune coordonnée personnelle dans les notes', sql("select position('@' in notes) from projects where code='masterarbeit'") === '0');
 ok("le correctif Masterarbeit ne touche pas au Projekt", /MPC/.test(sql("select coalesce(topic,'') from projects where code='projekt'")));
 
 ok('15 jalons, pas 22', sql(`select count(*) from milestones where project_id='${id}'`) === '15',
    sql(`select count(*) from milestones where project_id='${id}'`));
 ok('premier jalon daté au 24/09', sql(`select title||' | '||coalesce(due_date::text,'-') from milestones where project_id='${id}' order by sort_order limit 1`)
-   === 'Répondre à Prof. Ebrahimi | 2026-09-24',
+   === 'Répondre à l’encadrant | 2026-09-24',
    sql(`select title||' | '||coalesce(due_date::text,'-') from milestones where project_id='${id}' order by sort_order limit 1`));
 ok('dernier jalon = Kolloquium', sql(`select title from milestones where project_id='${id}' order by sort_order desc limit 1`) === 'Kolloquium');
 ok('aucun ancien jalon restant', sql(`select count(*) from milestones where project_id='${id}' and title='Implémentation'`) === '0');
@@ -92,7 +92,7 @@ ok('IALB appliqué sans rien importer', sql("select institute from projects wher
    sql("select institute from projects where code='masterarbeit'"));
 ok('15 jalons en base', sql(`select count(*) from milestones where project_id='${MA()}'`) === '15',
    sql(`select count(*) from milestones where project_id='${MA()}'`));
-ok("l'écran le montre", await p.evaluate(() => projByCode('masterarbeit').supervisor) === 'Prof. Dr.-Ing. Amir Ebrahimi');
+ok("l'écran le montre", await p.evaluate(() => projByCode('masterarbeit').supervisor) === 'Betreuer IALB');
 // second appareil, avec un vieux cache IAT : il ne doit ni réappliquer ni garder l'ancien
 const ctx2 = await b.newContext({ viewport: { width: 400, height: 850 } });
 const p2 = await ctx2.newPage(); p2.on('pageerror', e => errs.push('2: ' + e.message));

@@ -23,13 +23,12 @@ window.SEED2 = {
       institute: 'IALB',
       topic: 'Entwicklung eines Reglers für eine Maschine im Rahmen eines Industrieprojekts. '
            + 'Vorarbeiten aus einer bereits abgeschlossenen Masterarbeit vorhanden.',
-      supervisor: 'Prof. Dr.-Ing. Amir Ebrahimi',
+      supervisor: 'Betreuer IALB',
       cp: 30, start_date: null, end_date: null,
       status: 'prevu', contract_hours: null, hourly_rate: null, sort_order: 30,
       notes: 'Industriepartner et type de machine : à préciser. 24 semaines après inscription, '
            + 'prolongation unique de 8 semaines au plus. Note : 75 % mémoire, 25 % Kolloquium. '
-           + 'Inscription seulement après Projekt validé + 24 CP Wahl + 78 CP (§6(2)). '
-           + 'Contact : ebrahimi@ialb.uni-bremen.de · 0421 218-62680.' }
+           + 'Inscription seulement après Projekt validé + 24 CP Wahl + 78 CP (§6(2)).' }
   ],
 
   /* ── jalons par défaut ────────────────────────────────────────────────── */
@@ -60,7 +59,7 @@ window.SEED2 = {
     /* Les six premiers jalons précèdent l'inscription : pas d'offset `week`,
        le bouton « Appliquer le calendrier » les laisse tels quels. */
     masterarbeit: [
-      { title: 'Répondre à Prof. Ebrahimi', due_date: '2026-09-24' },
+      { title: 'Répondre à l’encadrant', due_date: '2026-09-24' },
       { title: 'Entretien : machine, partenaire industriel, outils, calendrier', due_date: null },
       { title: 'Obtenir et lire la Masterarbeit précédente (Vorarbeiten)', due_date: null },
       { title: 'Clarifier confidentialité (NDA / Sperrvermerk) avec le partenaire', due_date: null },
@@ -178,8 +177,8 @@ window.SEED2 = {
       "meta": {
         "format": "roadmap-patch-v2",
         "created": "2026-09-22",
-        "title": "Masterarbeit IALB (Prof. Ebrahimi) en remplacement de l'IAT",
-        "description": "Remplace l'engagement Masterarbeit (IAT) par la Masterarbeit IALB proposée par Prof. Dr.-Ing. Amir Ebrahimi : titre, institut, encadrant, sujet, notes, les 15 jalons et les liens de cours. Ajuste aussi le sujet du Master Projekt et la note du module NLS. Les cours sont désignés par leur numéro (num) ou leur titre ; l'application les résout en identifiants internes. Réappliquer ce fichier une seconde fois donne exactement le même résultat.",
+        "title": "Masterarbeit IALB en remplacement de l'IAT",
+        "description": "Remplace l'engagement Masterarbeit (IAT) par la Masterarbeit IALB proposée par l'IALB : titre, institut, encadrant, sujet, notes, les 15 jalons et les liens de cours. Ajuste aussi le sujet du Master Projekt et la note du module NLS. Les cours sont désignés par leur numéro (num) ou leur titre ; l'application les résout en identifiants internes. Réappliquer ce fichier une seconde fois donne exactement le même résultat.",
         "applied_rules": {
           "projects": "mise à jour sur le champ code, création si absent",
           "milestones": "les jalons existants de l'engagement visé sont supprimés, puis ceux-ci sont insérés",
@@ -212,19 +211,19 @@ window.SEED2 = {
           "title": "Masterarbeit — Reglerentwicklung für eine Maschine (Industrieprojekt)",
           "institute": "IALB",
           "topic": "Entwicklung eines Reglers für eine Maschine im Rahmen eines Industrieprojekts. Vorarbeiten aus einer bereits abgeschlossenen Masterarbeit vorhanden.",
-          "supervisor": "Prof. Dr.-Ing. Amir Ebrahimi",
+          "supervisor": "Betreuer IALB",
           "cp": 30,
           "start_date": null,
           "end_date": null,
           "status": "prevu",
-          "notes": "Industriepartner et type de machine : à préciser. 24 semaines après inscription, prolongation unique de 8 semaines au plus. Note : 75 % mémoire, 25 % Kolloquium. Inscription seulement après Projekt validé + 24 CP Wahl + 78 CP (§6(2)). Contact : ebrahimi@ialb.uni-bremen.de · 0421 218-62680."
+          "notes": "Industriepartner et type de machine : à préciser. 24 semaines après inscription, prolongation unique de 8 semaines au plus. Note : 75 % mémoire, 25 % Kolloquium. Inscription seulement après Projekt validé + 24 CP Wahl + 78 CP (§6(2))."
         }
       ],
       "milestones": [
         {
           "project": "masterarbeit",
           "sort_order": 1,
-          "title": "Répondre à Prof. Ebrahimi",
+          "title": "Répondre à l’encadrant",
           "due_date": "2026-09-24"
         },
         {
