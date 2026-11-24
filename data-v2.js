@@ -4,6 +4,8 @@
    ═══════════════════════════════════════════════════════════════════════════ */
 'use strict';
 
+const MPC_ARTICLES = [703, 704, 709, 710, 711, 712, 713, 714, 715, 716, 717, 718, 719, 720, 721, 722, 723, 724, 725, 726, 727, 728, 729, 733, 734, 735];
+
 window.SEED2 = {
 
   /* ── engagements ──────────────────────────────────────────────────────── */
@@ -524,6 +526,16 @@ window.SEED2 = {
           }
         ]
       }, { quiet: true });
+      } },
+    /* Liste de lecture MPC (n° 701 à 735) : 2 h par article. Les livres et le
+       mémoire restent à estimer. Ne touche qu'une durée encore à 0 ; condition
+       stable : dès que les articles ont une durée, le correctif ne repasse plus. */
+    { id: 'lecture-mpc-heures-2026-11',
+      toast: 'patch.mpcHours',
+      when: st => st.courses.some(c => !c.deleted && MPC_ARTICLES.includes(+c.num) && !(+c.hours)),
+      apply: ({ state: st, write }) => {
+        st.courses.filter(c => !c.deleted && MPC_ARTICLES.includes(+c.num) && !(+c.hours))
+          .forEach(c => write('courses', { id: c.id, hours: 2 }, { silent: true }));
       } },
   ],
 

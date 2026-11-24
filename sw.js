@@ -1,4 +1,4 @@
-const CACHE_NAME = 'henschel-roadmap-v10';
+const CACHE_NAME = 'henschel-roadmap-v11';
 const PRECACHE = [
   './', './index.html', './styles.css', './manifest.json', './config.js',
   './app.js', './app-v2.js', './i18n.js', './i18n-v2.js', './data.js',
