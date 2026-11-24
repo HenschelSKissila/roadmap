@@ -746,5 +746,715 @@ window.CATALOG_ADDITIONS = [
     "flag": null,
     "sort_order": 618,
     "source_category": "Langues & rédaction"
+  },
+  {
+    "num": 701,
+    "title": "MPC-Lektüre 01 — Nguetchue Deuleu, F. G. (2026) : Regelung einer zweiphasigen Klauenpolsynchronmaschine unter Berücksichtigung von Parameterunsicherheiten",
+    "bloc": "b1",
+    "hours": 0,
+    "hours_verified": false,
+    "url": null,
+    "objective": "À lire : Ch. 2.2.2 (modèle machine), 2.3 (FOC, Clarke/Park), 3 (banc), 4.1–4.2 (implémentation, Ts = 200 µs), 5 (Embedded Coder, STM32CubeIDE)",
+    "skills": [
+      "Étape 0-contexte-projet (ton contexte et le banc)",
+      "Priorité : essentiel",
+      "banc",
+      "FOC",
+      "PI",
+      "generation-de-code",
+      "STM32"
+    ],
+    "why": "Travail précédent : banc à 5 kHz, STM32F405 (Cortex-M4, FPU simple précision), machine biphasée 3 paires de pôles, capteurs Hall, procédure de génération de code à réutiliser.",
+    "flag": null,
+    "sort_order": 701,
+    "source_category": "Commande & systèmes"
+  },
+  {
+    "num": 702,
+    "title": "MPC-Lektüre 02 — Rodríguez, J.; Cortés, P. (2012) : Predictive Control of Power Converters and Electrical Drives",
+    "bloc": "b1",
+    "hours": 0,
+    "hours_verified": false,
+    "url": null,
+    "objective": "À lire : Ch. 3 (p. 31–38) et ch. 4 (p. 43–63)",
+    "skills": [
+      "Étape 1-principe-MPC (principe du MPC sur convertisseur)",
+      "Priorité : essentiel",
+      "FCS-MPC",
+      "fonction-cout",
+      "modele-discret"
+    ],
+    "why": "Principe du FCS-MPC : fonction coût, modèle discret, mise en œuvre. Base de FCS_MPC. Remarque : 1e11a88a : seules les premières pages ont du texte",
+    "flag": null,
+    "sort_order": 702,
+    "source_category": "Commande & systèmes"
+  },
+  {
+    "num": 703,
+    "title": "MPC-Lektüre 03 — Kouro, S.; Cortés, P.; Vargas, R.; Ammann, U.; Rodríguez, J. (2009) : Model Predictive Control—A Simple and Powerful Method to Control Power Converters",
+    "bloc": "b1",
+    "hours": 0,
+    "hours_verified": false,
+    "url": null,
+    "objective": "À lire : Article entier",
+    "skills": [
+      "Étape 1-principe-MPC (principe du MPC sur convertisseur)",
+      "Priorité : essentiel",
+      "FCS-MPC",
+      "introduction"
+    ],
+    "why": "Introduction courte et claire au MPC sur convertisseurs.",
+    "flag": null,
+    "sort_order": 703,
+    "source_category": "Commande & systèmes"
+  },
+  {
+    "num": 704,
+    "title": "MPC-Lektüre 04 — Cortés, P.; Rodríguez, J.; et al. (2012) : Delay Compensation in Model Predictive Current Control of a Three-Phase Inverter",
+    "bloc": "b1",
+    "hours": 0,
+    "hours_verified": false,
+    "url": null,
+    "objective": "À lire : Article entier (3 p.)",
+    "skills": [
+      "Étape 1-principe-MPC (principe du MPC sur convertisseur)",
+      "Priorité : essentiel",
+      "compensation-du-retard"
+    ],
+    "why": "Algorithme exact de la compensation du retard utilisée dans tous tes codes (étape 2). Remarque : 2 copies identiques",
+    "flag": null,
+    "sort_order": 704,
+    "source_category": "Commande & systèmes"
+  },
+  {
+    "num": 705,
+    "title": "MPC-Lektüre 05 — Wang, L. (2009) : Model Predictive Control System Design and Implementation Using MATLAB",
+    "bloc": "b1",
+    "hours": 0,
+    "hours_verified": false,
+    "url": null,
+    "objective": "À lire : Ch. 1 §1.1–1.4 (p. 1–22) puis §1.6–1.7 (p. 27–37) ; ch. 2 si contraintes",
+    "skills": [
+      "Étape 2-maths-CCS-MPC (mathématiques de tes codes CCS)",
+      "Priorité : essentiel",
+      "MPC",
+      "modele-incremental",
+      "Delta-u",
+      "observateur",
+      "MATLAB"
+    ],
+    "why": "Base exacte de MPC_speed_noobs et de la démonstration de J : éq. 1.3–1.5 (modèle augmenté), 1.16–1.17 (ΔU optimal). Remarque : 3 copies identiques",
+    "flag": null,
+    "sort_order": 705,
+    "source_category": "Commande & systèmes"
+  },
+  {
+    "num": 706,
+    "title": "MPC-Lektüre 06 — Rawlings, J. B.; Mayne, D. Q.; Diehl, M. (2017) : Model Predictive Control: Theory, Computation, and Design (2nd ed.)",
+    "bloc": "b1",
+    "hours": 0,
+    "hours_verified": false,
+    "url": null,
+    "objective": "À lire : Ch. 1 §1.2–1.5 (p. 1–60), surtout §1.5.2 « Disturbances and Zero Offset » (éq. 1.42–1.43)",
+    "skills": [
+      "Étape 2-maths-CCS-MPC (mathématiques de tes codes CCS)",
+      "Priorité : essentiel",
+      "MPC",
+      "estimation",
+      "zero-offset",
+      "perturbation"
+    ],
+    "why": "Théorie de l’observateur de T_L (MPC_speed) et de d_hat (CCS_MPC) : perturbation intégrante pour annuler l’erreur statique. Remarque : d06003b6 = extrait de 9 pages",
+    "flag": null,
+    "sort_order": 706,
+    "source_category": "Commande & systèmes"
+  },
+  {
+    "num": 707,
+    "title": "MPC-Lektüre 07 — Camacho, E. F.; Bordons, C.; Maestre, J. M. (2026) : Model Predictive Control (3rd ed.)",
+    "bloc": "b1",
+    "hours": 0,
+    "hours_verified": false,
+    "url": null,
+    "objective": "À lire : Ch. 1 (p. 1–20), ch. 4 §4.1 (p. 103), ch. 5 §5.2 « Unconstrained MPC Formulations with Clipping » (p. 127)",
+    "skills": [
+      "Étape 2-maths-CCS-MPC (mathématiques de tes codes CCS)",
+      "Priorité : essentiel",
+      "MPC",
+      "espace-etat",
+      "contraintes",
+      "clipping"
+    ],
+    "why": "§5.2 justifie exactement ton approche : solution sans contrainte puis saturation. Remarque : ISBN 978-3-031-87595-3 ; 2 copies identiques",
+    "flag": null,
+    "sort_order": 707,
+    "source_category": "Commande & systèmes"
+  },
+  {
+    "num": 708,
+    "title": "MPC-Lektüre 08 — Wang, L.; Chai, S.; Yoo, D.; Gan, L.; Ng, K. (2015) : PID and Predictive Control of Electrical Drives and Power Converters using MATLAB/Simulink",
+    "bloc": "b1",
+    "hours": 0,
+    "hours_verified": false,
+    "url": null,
+    "objective": "À lire : Ch. 1 §1.2 (SPMSM, p. 5), ch. 2 (PWM, p. 27), ch. 6 (FCS en dq, p. 171), ch. 8 (DMPC du PMSM, p. 265–282), ch. 10 (Simulink et banc, p. 315) ; ch. 3–5 (PID) pour la comparaison",
+    "skills": [
+      "Étape 3-application-PMSM (application au PMSM et à ta cascade)",
+      "Priorité : essentiel",
+      "PMSM",
+      "DMPC",
+      "FCS-dq",
+      "PWM",
+      "Simulink",
+      "banc"
+    ],
+    "why": "Le manuel le plus proche de ton projet : cascade, MPC discret du PMSM, essais de charge, tutoriels Simulink. Remarque : Livre complet (88e3d154) + chapitres séparés. Chapitres prioritaires : ca419042 (ch.1), 61f3c7a5 (ch.2), f75ae850 (ch.6), cbfc0118 (ch.8), 50207d15 (ch.10). Optionnels : b0485a6d, 29d4721b, 67caec03 (PID), c9fdb025 (FCS αβ), bdbbd0b3 (CMPC). Inutiles : a1c990f5 (Frontmatter), a6b09e56 (Index). DOI 10.1002/9781118339459",
+    "flag": null,
+    "sort_order": 708,
+    "source_category": "Commande & systèmes"
+  },
+  {
+    "num": 709,
+    "title": "MPC-Lektüre 09 — Mariethoz, S.; Domahidi, A.; Morari, M. (2012) : High-Bandwidth Explicit Model Predictive Control of Electrical Drives",
+    "bloc": "b1",
+    "hours": 0,
+    "hours_verified": false,
+    "url": null,
+    "objective": "À lire : Article entier ; surtout §IV.A (observateur) et §V (boucle de vitesse)",
+    "skills": [
+      "Étape 3-application-PMSM (application au PMSM et à ta cascade)",
+      "Priorité : essentiel",
+      "cascade-MPC",
+      "observateur",
+      "offset-free",
+      "MPC-explicite"
+    ],
+    "why": "Architecture la plus proche de la tienne : MPC courant + MPC vitesse, chacun avec observateur de perturbation.",
+    "flag": null,
+    "sort_order": 709,
+    "source_category": "Commande & systèmes"
+  },
+  {
+    "num": 710,
+    "title": "MPC-Lektüre 10 — Bolognani, S.; Bolognani, S.; Peretti, L.; Zigliotto, M. (2009) : Design and Implementation of Model Predictive Control for Electrical Motor Drives",
+    "bloc": "b1",
+    "hours": 0,
+    "hours_verified": false,
+    "url": null,
+    "objective": "À lire : Article entier",
+    "skills": [
+      "Étape 3-application-PMSM (application au PMSM et à ta cascade)",
+      "Priorité : important",
+      "MPC-vitesse-courant",
+      "contraintes",
+      "implementation"
+    ],
+    "why": "Conception pas à pas et conseils d’implémentation ; MPC vitesse + courant réunis.",
+    "flag": null,
+    "sort_order": 710,
+    "source_category": "Commande & systèmes"
+  },
+  {
+    "num": 711,
+    "title": "MPC-Lektüre 11 — Pan, ?; Chen, ? (2023) : Field-Oriented Control of Stepper Motor with Model Predictive Current Control",
+    "bloc": "b1",
+    "hours": 0,
+    "hours_verified": false,
+    "url": null,
+    "objective": "À lire : Article entier (7 p.)",
+    "skills": [
+      "Étape 3-application-PMSM (application au PMSM et à ta cascade)",
+      "Priorité : essentiel",
+      "moteur-biphase",
+      "CCS-MPC",
+      "axe-q",
+      "fonction-cout"
+    ],
+    "why": "Machine la plus proche (moteur pas-à-pas biphasé). Attention : eq. 8 (Δu cumulatif) est à corriger, voir notre analyse. Remarque : ee1b19f2 est nommé « Nienhaus 2017 » mais contient cet article (ATDE). 4 copies.",
+    "flag": null,
+    "sort_order": 711,
+    "source_category": "Commande & systèmes"
+  },
+  {
+    "num": 712,
+    "title": "MPC-Lektüre 12 — Chai, S.; Wang, L.; Rogers, E. (2013) : Model predictive control of a permanent magnet synchronous motor with experimental validation",
+    "bloc": "b1",
+    "hours": 0,
+    "hours_verified": false,
+    "url": null,
+    "objective": "À lire : Article entier",
+    "skills": [
+      "Étape 3-application-PMSM (application au PMSM et à ta cascade)",
+      "Priorité : important",
+      "PMSM",
+      "DMPC",
+      "cascade",
+      "experimental"
+    ],
+    "why": "Groupe de Wang : MPC du PMSM validé expérimentalement, complément du livre Wang 2015.",
+    "flag": null,
+    "sort_order": 712,
+    "source_category": "Commande & systèmes"
+  },
+  {
+    "num": 713,
+    "title": "MPC-Lektüre 13 — Chai, S.; Wang, L.; Rogers, E. (2013) : A Cascade MPC Control Structure for a PMSM With Speed Ripple Minimization",
+    "bloc": "b1",
+    "hours": 0,
+    "hours_verified": false,
+    "url": null,
+    "objective": "À lire : §II–III",
+    "skills": [
+      "Étape 3-application-PMSM (application au PMSM et à ta cascade)",
+      "Priorité : important",
+      "cascade-MPC",
+      "ondulation-vitesse",
+      "offset-capteur-courant"
+    ],
+    "why": "Cascade MPC ; ondulation de vitesse à ω_e due aux offsets des capteurs de courant (diagnostic banc).",
+    "flag": null,
+    "sort_order": 713,
+    "source_category": "Commande & systèmes"
+  },
+  {
+    "num": 714,
+    "title": "MPC-Lektüre 14 — Preindl, M.; Bolognani, S. (2013) : Model Predictive Direct Speed Control with Finite Control Set of PMSM Drive Systems",
+    "bloc": "b1",
+    "hours": 0,
+    "hours_verified": false,
+    "url": null,
+    "objective": "À lire : §II–III",
+    "skills": [
+      "Étape 3-application-PMSM (application au PMSM et à ta cascade)",
+      "Priorité : important",
+      "commande-directe-vitesse",
+      "FCS",
+      "observateur-PI",
+      "couple-de-charge"
+    ],
+    "why": "Alternative sans cascade ; rejet du couple de charge par observateur PI. IEEE TPEL 28(2):1007–1015, doi 10.1109/TPEL.2012.2204277",
+    "flag": null,
+    "sort_order": 714,
+    "source_category": "Commande & systèmes"
+  },
+  {
+    "num": 715,
+    "title": "MPC-Lektüre 15 — Garcia, C.; et al. (2018) : Modulated Model Predictive Speed Control for PMSM Drives",
+    "bloc": "b1",
+    "hours": 0,
+    "hours_verified": false,
+    "url": null,
+    "objective": "À lire : Article entier (6 p.)",
+    "skills": [
+      "Étape 3-application-PMSM (application au PMSM et à ta cascade)",
+      "Priorité : important",
+      "MPC-vitesse",
+      "modulation",
+      "compensation-perturbation"
+    ],
+    "why": "MPC de vitesse modulé avec compensation de perturbation : proche de CCS + PWM.",
+    "flag": null,
+    "sort_order": 715,
+    "source_category": "Commande & systèmes"
+  },
+  {
+    "num": 716,
+    "title": "MPC-Lektüre 16 — Wang, ?; et al. (2022) : An Improved Finite Control Set Model Predictive Current Control for a Two-Phase Hybrid Stepper Motor",
+    "bloc": "b1",
+    "hours": 0,
+    "hours_verified": false,
+    "url": null,
+    "objective": "À lire : Article entier",
+    "skills": [
+      "Étape 3-application-PMSM (application au PMSM et à ta cascade)",
+      "Priorité : important",
+      "moteur-biphase",
+      "FCS-MPC",
+      "deadbeat"
+    ],
+    "why": "Moteur biphasé ; attention : alimenté par un onduleur triphasé, pas par deux ponts en H.",
+    "flag": null,
+    "sort_order": 716,
+    "source_category": "Commande & systèmes"
+  },
+  {
+    "num": 717,
+    "title": "MPC-Lektüre 17 — Karamanakos, P.; Geyer, T. (2020) : Guidelines for the Design of Finite Control Set Model Predictive Controllers",
+    "bloc": "b1",
+    "hours": 0,
+    "hours_verified": false,
+    "url": null,
+    "objective": "À lire : Article entier",
+    "skills": [
+      "Étape 4-implementation-microcontroleur (implémentation sur microcontrôleur et génération de code)",
+      "Priorité : important",
+      "FCS-MPC",
+      "conception",
+      "periode",
+      "retard"
+    ],
+    "why": "Choix de la période, du retard, de la fonction coût pour le FCS.",
+    "flag": null,
+    "sort_order": 717,
+    "source_category": "Commande & systèmes"
+  },
+  {
+    "num": 718,
+    "title": "MPC-Lektüre 18 — De Boni, G.; Mantione, L.; Frosini, L. (2026) : Embedded Implementation and Characterization of a Model Predictive Control in Velocity Form for Synchronous Motor Currents",
+    "bloc": "b1",
+    "hours": 0,
+    "hours_verified": false,
+    "url": null,
+    "objective": "À lire : Article entier",
+    "skills": [
+      "Étape 4-implementation-microcontroleur (implémentation sur microcontrôleur et génération de code)",
+      "Priorité : important",
+      "forme-vitesse",
+      "microcontroleur",
+      "CCS-MPC"
+    ],
+    "why": "MPC courant en forme vitesse (Δu) sur microcontrôleur bon marché : même idée que MPC_speed_noobs, côté courant.",
+    "flag": null,
+    "sort_order": 718,
+    "source_category": "Commande & systèmes"
+  },
+  {
+    "num": 719,
+    "title": "MPC-Lektüre 19 — Adhau, S.; et al. (2021) : Embedded Model Predictive Controller on Low-Cost Low-End Microcontroller for Electrical Drives",
+    "bloc": "b1",
+    "hours": 0,
+    "hours_verified": false,
+    "url": null,
+    "objective": "À lire : Article entier",
+    "skills": [
+      "Étape 4-implementation-microcontroleur (implémentation sur microcontrôleur et génération de code)",
+      "Priorité : important",
+      "microcontroleur",
+      "embarque"
+    ],
+    "why": "MPC sur microcontrôleur bas de gamme : contraintes de temps et de mémoire.",
+    "flag": null,
+    "sort_order": 719,
+    "source_category": "Commande & systèmes"
+  },
+  {
+    "num": 720,
+    "title": "MPC-Lektüre 20 — Chaber, P.; Ławryńczuk, M. (2020) : AutoMATiC: Code Generation of Model Predictive Control Algorithms for Microcontrollers",
+    "bloc": "b1",
+    "hours": 0,
+    "hours_verified": false,
+    "url": null,
+    "objective": "À lire : Article entier",
+    "skills": [
+      "Étape 4-implementation-microcontroleur (implémentation sur microcontrôleur et génération de code)",
+      "Priorité : important",
+      "generation-de-code",
+      "C",
+      "microcontroleur"
+    ],
+    "why": "Génération de code C de MPC pour microcontrôleurs (3e partie de ton sujet).",
+    "flag": null,
+    "sort_order": 720,
+    "source_category": "Commande & systèmes"
+  },
+  {
+    "num": 721,
+    "title": "MPC-Lektüre 21 — Toso, F.; Carlet, P. G.; Favato, A.; Bolognani, S. (2019) : On-line Continuous Control Set MPC for PMSM drives current loops at high sampling rate using qpOASES",
+    "bloc": "b1",
+    "hours": 0,
+    "hours_verified": false,
+    "url": null,
+    "objective": "À lire : Article entier",
+    "skills": [
+      "Étape 4-implementation-microcontroleur (implémentation sur microcontrôleur et génération de code)",
+      "Priorité : important",
+      "CCS-MPC",
+      "QP-en-ligne",
+      "contraintes-tension"
+    ],
+    "why": "Pour justifier pourquoi tu n’intègres pas les contraintes par QP en ligne (6 kHz avec qpOASES).",
+    "flag": null,
+    "sort_order": 721,
+    "source_category": "Commande & systèmes"
+  },
+  {
+    "num": 722,
+    "title": "MPC-Lektüre 22 — Akrami, ?; et al. (2024) : Application of Low-Resolution Hall Position Sensor in Control and Position Estimation of PMSM: A Review",
+    "bloc": "b1",
+    "hours": 0,
+    "hours_verified": false,
+    "url": null,
+    "objective": "À lire : Article entier",
+    "skills": [
+      "Étape 6-commande-de-position (commande de position et mesure de position)",
+      "Priorité : important",
+      "capteurs-Hall",
+      "estimation-position",
+      "vitesse"
+    ],
+    "why": "Ton banc mesure la position avec 5 capteurs Hall : utile pour la vitesse et surtout pour la commande de position.",
+    "flag": null,
+    "sort_order": 722,
+    "source_category": "Commande & systèmes"
+  },
+  {
+    "num": 723,
+    "title": "MPC-Lektüre 23 — Kong, ?; et al. (2026) : A Novel CCS-MPC Algorithm for SPMSM Position Control with Innovative Constraint Processing Strategy",
+    "bloc": "b1",
+    "hours": 0,
+    "hours_verified": false,
+    "url": null,
+    "objective": "À lire : Article entier",
+    "skills": [
+      "Étape 6-commande-de-position (commande de position et mesure de position)",
+      "Priorité : important",
+      "position",
+      "CCS-MPC",
+      "multi-pas",
+      "retard",
+      "contraintes"
+    ],
+    "why": "CCS-MPC de position pour SPMSM avec compensation du retard : le plus proche de ta future boucle de position.",
+    "flag": null,
+    "sort_order": 723,
+    "source_category": "Commande & systèmes"
+  },
+  {
+    "num": 724,
+    "title": "MPC-Lektüre 24 — Fuentes, E.; Kennel, R. (2013) : A finite-set model predictive position controller for the permanent magnet synchronous motor",
+    "bloc": "b1",
+    "hours": 0,
+    "hours_verified": false,
+    "url": null,
+    "objective": "À lire : Article entier (7 p.)",
+    "skills": [
+      "Étape 6-commande-de-position (commande de position et mesure de position)",
+      "Priorité : important",
+      "position",
+      "FCS-MPC",
+      "temps-minimal",
+      "contraintes"
+    ],
+    "why": "Position par MPC avec limites de couple et de vitesse (modèle double/triple intégrateur).",
+    "flag": null,
+    "sort_order": 724,
+    "source_category": "Commande & systèmes"
+  },
+  {
+    "num": 725,
+    "title": "MPC-Lektüre 25 — Kyslan, K.; et al. (2018) : Feedforward Finite Control Set Model Predictive Position Control of PMSM",
+    "bloc": "b1",
+    "hours": 0,
+    "hours_verified": false,
+    "url": null,
+    "objective": "À lire : Article entier",
+    "skills": [
+      "Étape 6-commande-de-position (commande de position et mesure de position)",
+      "Priorité : important",
+      "position",
+      "FCS-MPC",
+      "profil-de-mouvement"
+    ],
+    "why": "Position + vitesse + courant dans un seul FCS-MPC avec générateur de profil.",
+    "flag": null,
+    "sort_order": 725,
+    "source_category": "Commande & systèmes"
+  },
+  {
+    "num": 726,
+    "title": "MPC-Lektüre 26 — Šlapák, V.; et al. (2016) : Position Controller for PMSM Based on Finite Control Set Model Predictive Control",
+    "bloc": "b1",
+    "hours": 0,
+    "hours_verified": false,
+    "url": null,
+    "objective": "À lire : Article entier",
+    "skills": [
+      "Étape 6-commande-de-position (commande de position et mesure de position)",
+      "Priorité : important",
+      "position",
+      "FCS-MPC"
+    ],
+    "why": "Régulateur de position FCS-MPC avec consignes de position, vitesse, accélération.",
+    "flag": null,
+    "sort_order": 726,
+    "source_category": "Commande & systèmes"
+  },
+  {
+    "num": 727,
+    "title": "MPC-Lektüre 27 — Zhang, ?; et al. (2023) : Fast position predictive control with current and speed limits for permanent magnet motor systems",
+    "bloc": "b1",
+    "hours": 0,
+    "hours_verified": false,
+    "url": null,
+    "objective": "À lire : Article entier",
+    "skills": [
+      "Étape 6-commande-de-position (commande de position et mesure de position)",
+      "Priorité : important",
+      "position",
+      "limites-courant-vitesse"
+    ],
+    "why": "Position prédictive avec limites de courant et de vitesse.",
+    "flag": null,
+    "sort_order": 727,
+    "source_category": "Commande & systèmes"
+  },
+  {
+    "num": 728,
+    "title": "MPC-Lektüre 28 — Wang, ?; Liu, ? (2023) : Model predictive position control of permanent magnet synchronous motor servo system with sliding mode",
+    "bloc": "b1",
+    "hours": 0,
+    "hours_verified": false,
+    "url": null,
+    "objective": "À lire : Article entier",
+    "skills": [
+      "Étape 6-commande-de-position (commande de position et mesure de position)",
+      "Priorité : important",
+      "position",
+      "servo",
+      "mode-glissant"
+    ],
+    "why": "MPC de position pour servo PMSM.",
+    "flag": null,
+    "sort_order": 728,
+    "source_category": "Commande & systèmes"
+  },
+  {
+    "num": 729,
+    "title": "MPC-Lektüre 29 — Schuller, ?; et al. (2014) : Position control of a linear transverse flux machine with subordinate current control",
+    "bloc": "b1",
+    "hours": 0,
+    "hours_verified": false,
+    "url": null,
+    "objective": "À lire : Article entier",
+    "skills": [
+      "Étape 6-commande-de-position (commande de position et mesure de position)",
+      "Priorité : important",
+      "position",
+      "machine-biphasee",
+      "flux-transverse"
+    ],
+    "why": "Machine biphasée à flux transverse (proche de la machine à griffes) en position avec boucle de courant.",
+    "flag": null,
+    "sort_order": 729,
+    "source_category": "Commande & systèmes"
+  },
+  {
+    "num": 730,
+    "title": "MPC-Lektüre 30 — Schröder, D.; Böcker, J. (Hrsg.) (2015) : Elektrische Antriebe 2 – Band 1: Regelung von Antriebssystemen",
+    "bloc": "b1",
+    "hours": 0,
+    "hours_verified": false,
+    "url": null,
+    "objective": "À lire : §5.2 Kaskadenregelung (p. 120), ch. 6 Abtastsysteme (p. 196)",
+    "skills": [
+      "Étape 5-approfondissement-redaction (approfondissement, état de l’art, rédaction)",
+      "Priorité : important",
+      "cascade",
+      "abtastsysteme",
+      "z-transformation"
+    ],
+    "why": "Référence allemande pour tes encadrants : cascade et systèmes échantillonnés. (Non lu en entier.)",
+    "flag": null,
+    "sort_order": 730,
+    "source_category": "Commande & systèmes"
+  },
+  {
+    "num": 731,
+    "title": "MPC-Lektüre 31 — Linder, A.; et al. (2023) : Modellbasierte Prädiktivregelung in der Antriebstechnik / Model-Based Predictive Control of Electric Drives",
+    "bloc": "b1",
+    "hours": 0,
+    "hours_verified": false,
+    "url": null,
+    "objective": "À lire : Ch. 5 MPC (p. 49), ch. 6 GPC (p. 75)",
+    "skills": [
+      "Étape 5-approfondissement-redaction (approfondissement, état de l’art, rédaction)",
+      "Priorité : important",
+      "MPC",
+      "GPC",
+      "antriebstechnik"
+    ],
+    "why": "Référence bilingue allemand/anglais sur le prédictif en entraînements.",
+    "flag": null,
+    "sort_order": 731,
+    "source_category": "Commande & systèmes"
+  },
+  {
+    "num": 732,
+    "title": "MPC-Lektüre 32 — Lunze, J. (2016) : Regelungstechnik 2: Mehrgrößensysteme, Digitale Regelung",
+    "bloc": "b1",
+    "hours": 0,
+    "hours_verified": false,
+    "url": null,
+    "objective": "À lire : Ch. 3 §3.2 Beobachtbarkeit (p. 91), ch. 7 Optimale Regelung (p. 291), chapitres « Digitale Regelung »",
+    "skills": [
+      "Étape 5-approfondissement-redaction (approfondissement, état de l’art, rédaction)",
+      "Priorité : important",
+      "observateur",
+      "beobachtbarkeit",
+      "LQ",
+      "digitale-regelung"
+    ],
+    "why": "Bases allemandes de l’observateur et du LQ (le MPC sans contrainte en est proche).",
+    "flag": null,
+    "sort_order": 732,
+    "source_category": "Commande & systèmes"
+  },
+  {
+    "num": 733,
+    "title": "MPC-Lektüre 33 — Hackl, C. M.; et al. (2013) : Is multiple-objective model-predictive control \"optimal\"?",
+    "bloc": "b1",
+    "hours": 0,
+    "hours_verified": false,
+    "url": null,
+    "objective": "À lire : Article entier (8 p.)",
+    "skills": [
+      "Étape 5-approfondissement-redaction (approfondissement, état de l’art, rédaction)",
+      "Priorité : important",
+      "cascade-vs-unique",
+      "multi-objectif"
+    ],
+    "why": "Argument pour garder la cascade plutôt qu’un MPC unique.",
+    "flag": null,
+    "sort_order": 733,
+    "source_category": "Commande & systèmes"
+  },
+  {
+    "num": 734,
+    "title": "MPC-Lektüre 34 — Karamanakos, P.; Liegmann, E.; Geyer, T.; Kennel, R. (2020) : Model Predictive Control of Power Electronic Systems: Methods, Results, and Challenges",
+    "bloc": "b1",
+    "hours": 0,
+    "hours_verified": false,
+    "url": null,
+    "objective": "À lire : §I–III et conclusion",
+    "skills": [
+      "Étape 5-approfondissement-redaction (approfondissement, état de l’art, rédaction)",
+      "Priorité : important",
+      "etat-de-l-art",
+      "MPC-direct-indirect"
+    ],
+    "why": "Classification MPC direct (FCS + gates) / indirect (CCS + PWM) pour ton chapitre état de l’art. Remarque : 3 copies identiques",
+    "flag": null,
+    "sort_order": 734,
+    "source_category": "Commande & systèmes"
+  },
+  {
+    "num": 735,
+    "title": "MPC-Lektüre 35 — Rodríguez, J.; et al. (2022) : Latest Advances of Model Predictive Control in Electrical Drives—Part I: Basic Concepts and Advanced Strategies",
+    "bloc": "b1",
+    "hours": 0,
+    "hours_verified": false,
+    "url": null,
+    "objective": "À lire : Article entier",
+    "skills": [
+      "Étape 5-approfondissement-redaction (approfondissement, état de l’art, rédaction)",
+      "Priorité : important",
+      "etat-de-l-art",
+      "robustesse",
+      "facteurs-de-ponderation"
+    ],
+    "why": "État de l’art récent pour ton rapport.",
+    "flag": null,
+    "sort_order": 735,
+    "source_category": "Commande & systèmes"
   }
 ];
